@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pack Réussite Bac Maths | MathsAvecFred</title>
+  <meta name="description" content="Le pack complet pour réussir le Bac de Maths en Terminale. 6 fiches de cours + 15 exercices corrigés type Bac. Dérivées, limites, exponentielle, suites, probabilités, intégrales.">
+  <meta property="og:title" content="Pack Réussite Bac Maths — MathsAvecFred">
+  <meta property="og:description" content="6 fiches de révision + 15 exercices corrigés type Bac. Terminale. 14,90 €.">
+  <meta property="og:image" content="og-image.png">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+    onload="renderMathInElement(document.body,{delimiters:[{left:'$$',right:'$$',display:true},{left:'$',right:'$',display:false}]});"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,600;0,700;0,800;1,400&display=swap');
+    :root {
+      --blue: #2563eb;
+      --blue-dark: #1e40af;
+      --blue-light: #eff6ff;
+      --green: #16a34a;
+      --green-light: #f0fdf4;
+      --text: #0f172a;
+      --muted: #64748b;
+      --border: #e2e8f0;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', sans-serif; color: var(--text); line-height: 1.65; background: #fff; }
+    /* NAV */
+    nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,0.95); backdrop-filter: blur(8px); border-bottom: 1px solid var(--border); padding: 14px 20px; display: flex; justify-content: space-between; align-items: center; }
+    .nav-brand { font-weight: 800; color: var(--blue-dark); font-size: 17px; }
+    .nav-cta { background: var(--blue); color: white; padding: 9px 20px; border-radius: 8px; font-weight: 700; font-size: 14px; text-decoration: none; transition: background 0.2s; }
+    .nav-cta:hover { background: var(--blue-dark); }
+    /* HERO */
+    .hero { background: linear-gradient(160deg, #1e3a8a 0%, #2563eb 55%, #0891b2 100%); color: white; padding: 80px 20px 72px; text-align: center; }
+    .hero-badge { display: inline-block; background: rgba(255,255,255,0.15); border: 1px solid rgba(255,255,255,0.3); padding: 6px 16px; border-radius: 100px; font-size: 13px; font-weight: 600; margin-bottom: 22px; }
+    .hero h1 { font-size: clamp(28px, 5vw, 48px); font-weight: 800; line-height: 1.15; max-width: 700px; margin: 0 auto 18px; }
+    .hero h1 span { color: #fde68a; }
+    .hero-sub { font-size: 17px; opacity: 0.9; max-width: 560px; margin: 0 auto 36px; }
+    .hero-cta { display: inline-block; background: #fde68a; color: #1e3a8a; padding: 16px 38px; border-radius: 12px; font-size: 18px; font-weight: 800; text-decoration: none; transition: transform 0.15s, box-shadow 0.15s; box-shadow: 0 4px 24px rgba(0,0,0,0.2); }
+    .hero-cta:hover { transform: translateY(-2px); box-shadow: 0 8px 32px rgba(0,0,0,0.25); }
+    .hero-price { margin-top: 14px; font-size: 14px; opacity: 0.8; }
+    .hero-stats { display: flex; justify-content: center; gap: 32px; margin-top: 42px; flex-wrap: wrap; }
+    .stat { text-align: center; }
+    .stat-num { font-size: 32px; font-weight: 800; }
+    .stat-label { font-size: 12px; opacity: 0.7; margin-top: 2px; }
+    /* SECTIONS */
+    section { padding: 64px 20px; }
+    .container { max-width: 820px; margin: 0 auto; }
+    .section-label { font-size: 12px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--blue); margin-bottom: 10px; }
+    .section-title { font-size: clamp(22px, 3.5vw, 32px); font-weight: 800; margin-bottom: 14px; color: var(--text); }
+    .section-sub { color: var(--muted); font-size: 16px; max-width: 540px; margin-bottom: 40px; }
+    /* PROBLEM */
+    .problem-bg { background: #0f172a; color: white; }
+    .problem-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; }
+    .pain-card { background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; padding: 20px; }
+    .pain-icon { font-size: 28px; margin-bottom: 10px; }
+    .pain-card h3 { font-size: 15px; font-weight: 700; margin-bottom: 6px; }
+    .pain-card p { font-size: 13px; opacity: 0.7; }
+    /* PRODUCT CONTENTS */
+    .contents-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; }
+    .content-card { background: var(--blue-light); border: 1px solid #bfdbfe; border-radius: 12px; padding: 20px; }
+    .content-card .fiche-num { width: 36px; height: 36px; background: var(--blue); color: white; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 15px; margin-bottom: 12px; }
+    .content-card h3 { font-size: 15px; font-weight: 700; margin-bottom: 8px; color: var(--blue-dark); }
+    .content-card ul { padding-left: 16px; color: var(--muted); font-size: 13px; }
+    .content-card li { margin: 3px 0; }
+    /* EXERCISE PREVIEW */
+    .exo-preview { background: #f8fafc; border: 1px solid var(--border); border-radius: 12px; padding: 20px; margin-bottom: 16px; }
+    .exo-preview h3 { font-size: 14px; font-weight: 700; color: var(--blue-dark); margin-bottom: 8px; }
+    .diff-badge { display: inline-block; padding: 3px 10px; border-radius: 100px; font-size: 11px; font-weight: 700; }
+    .diff-easy { background: #dcfce7; color: #15803d; }
+    .diff-med { background: #fef3c7; color: #92400e; }
+    .diff-hard { background: #fee2e2; color: #b91c1c; }
+    /* FORMULA PREVIEW */
+    .formula-preview { background: var(--blue-light); border-left: 4px solid var(--blue); padding: 12px 16px; border-radius: 0 8px 8px 0; margin: 10px 0; font-size: 14px; }
+    /* TESTIMONIALS */
+    .reviews-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; }
+    .review { background: white; border: 1px solid var(--border); border-radius: 12px; padding: 18px; }
+    .review-stars { color: #f59e0b; font-size: 16px; margin-bottom: 8px; }
+    .review-text { font-size: 14px; color: var(--muted); font-style: italic; margin-bottom: 10px; }
+    .review-author { font-size: 13px; font-weight: 700; color: var(--text); }
+    /* PRICING */
+    .pricing-bg { background: linear-gradient(160deg, #f0fdf4, #eff6ff); }
+    .pricing-card { background: white; border: 2px solid var(--blue); border-radius: 16px; max-width: 480px; margin: 0 auto; padding: 36px; text-align: center; box-shadow: 0 8px 40px rgba(37,99,235,0.12); }
+    .pricing-badge { background: var(--blue); color: white; padding: 4px 14px; border-radius: 100px; font-size: 12px; font-weight: 700; display: inline-block; margin-bottom: 16px; }
+    .pricing-title { font-size: 22px; font-weight: 800; margin-bottom: 8px; }
+    .pricing-price { font-size: 52px; font-weight: 800; color: var(--blue-dark); margin: 12px 0 4px; }
+    .pricing-price sup { font-size: 22px; vertical-align: super; }
+    .pricing-desc { color: var(--muted); font-size: 14px; margin-bottom: 24px; }
+    .pricing-features { text-align: left; margin: 20px 0 28px; }
+    .pricing-features li { display: flex; gap: 10px; margin: 8px 0; font-size: 14px; list-style: none; }
+    .pricing-features li::before { content: "✓"; color: var(--green); font-weight: 700; flex-shrink: 0; }
+    .buy-btn { display: block; background: var(--blue); color: white; padding: 16px 32px; border-radius: 10px; font-size: 17px; font-weight: 800; text-decoration: none; transition: background 0.2s, transform 0.15s; margin-bottom: 12px; }
+    .buy-btn:hover { background: var(--blue-dark); transform: translateY(-1px); }
+    .pricing-note { font-size: 12px; color: var(--muted); }
+    /* EMAIL CAPTURE */
+    .email-section { background: #0f172a; color: white; padding: 56px 20px; text-align: center; }
+    .email-section h2 { font-size: 24px; font-weight: 800; margin-bottom: 10px; }
+    .email-section p { opacity: 0.75; font-size: 15px; margin-bottom: 24px; }
+    .email-form { display: flex; gap: 10px; max-width: 440px; margin: 0 auto; flex-wrap: wrap; }
+    .email-form input { flex: 1; padding: 13px 16px; border-radius: 8px; border: none; font-size: 15px; min-width: 220px; }
+    .email-form button { background: #fde68a; color: #1e3a8a; padding: 13px 24px; border-radius: 8px; font-size: 15px; font-weight: 800; border: none; cursor: pointer; transition: transform 0.15s; }
+    .email-form button:hover { transform: translateY(-1px); }
+    .email-ok { display: none; color: #86efac; font-weight: 700; font-size: 15px; margin-top: 14px; }
+    /* FAQ */
+    .faq-item { border-bottom: 1px solid var(--border); padding: 18px 0; }
+    .faq-q { font-weight: 700; font-size: 15px; cursor: pointer; display: flex; justify-content: space-between; align-items: center; }
+    .faq-q::after { content: "+"; font-size: 20px; color: var(--blue); transition: transform 0.2s; }
+    .faq-q.open::after { transform: rotate(45deg); }
+    .faq-a { font-size: 14px; color: var(--muted); margin-top: 10px; display: none; }
+    /* FOOTER */
+    footer { background: #0f172a; color: rgba(255,255,255,0.5); padding: 28px 20px; text-align: center; font-size: 13px; }
+    footer a { color: rgba(255,255,255,0.7); text-decoration: none; }
+    footer a:hover { color: white; }
+    /* RESPONSIVE */
+    @media (max-width: 600px) {
+      .hero-stats { gap: 20px; }
+      .pricing-price { font-size: 40px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <span class="nav-brand">MathsAvecFred</span>
+  <a href="#acheter" class="nav-cta">Obtenir le Pack — 14,90 €</a>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-badge">Le pack de revision N°1 pour le Bac Maths</div>
+  <h1>Maîtrise les <span>6 chapitres clés</span> du Bac de Maths en Terminale</h1>
+  <p class="hero-sub">6 fiches de cours ultra-condensées + 15 exercices corrigés type Bac. Formules vérifiées. Méthodes pas-à-pas. Prêt à imprimer ou utiliser sur mobile.</p>
+  <a href="#acheter" class="hero-cta">Obtenir le Pack Maintenant</a>
+  <p class="hero-price">14,90 € — Accès immédiat et définitif</p>
+  <div class="hero-stats">
+    <div class="stat"><div class="stat-num">6</div><div class="stat-label">Fiches de cours</div></div>
+    <div class="stat"><div class="stat-num">15</div><div class="stat-label">Exercices type Bac</div></div>
+    <div class="stat"><div class="stat-num">3</div><div class="stat-label">Niveaux de difficulté</div></div>
+    <div class="stat"><div class="stat-num">100%</div><div class="stat-label">Formules vérifiées</div></div>
+  </div>
+</div>
+
+<!-- PROBLEM -->
+<section class="problem-bg">
+  <div class="container">
+    <div class="section-label" style="color:#93c5fd;">Le problème</div>
+    <h2 class="section-title" style="color:white;">Le Bac Maths fait peur. Voici pourquoi.</h2>
+    <p class="section-sub" style="color:rgba(255,255,255,0.65);">Ces situations te parlent ? Ce pack a été conçu exactement pour les résoudre.</p>
+    <div class="problem-grid">
+      <div class="pain-card">
+        <div class="pain-icon">😤</div>
+        <h3>Trop de cours, pas assez de méthode</h3>
+        <p>Tu as le livre, mais tu ne sais pas quoi appliquer face à un exercice.</p>
+      </div>
+      <div class="pain-card">
+        <div class="pain-icon">😰</div>
+        <h3>Les formules se mélangent</h3>
+        <p>Dérivée d'un produit, d'un quotient, composée... difficile de tout retenir.</p>
+      </div>
+      <div class="pain-card">
+        <div class="pain-icon">😩</div>
+        <h3>Les corrections du livre sont incompréhensibles</h3>
+        <p>Pas d'explication intermédiaire, on passe directement au résultat.</p>
+      </div>
+      <div class="pain-card">
+        <div class="pain-icon">⏰</div>
+        <h3>Plus le temps de tout réviser</h3>
+        <p>Le Bac approche. Il faut aller à l'essentiel, rapidement.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTENTS -->
+<section>
+  <div class="container">
+    <div class="section-label">Ce qui est inclus</div>
+    <h2 class="section-title">6 fiches de cours — l'essentiel du programme</h2>
+    <p class="section-sub">Chaque fiche : rappels de cours + méthodes illustrées + exemples corrigés pas-à-pas + liste des pièges à éviter au Bac.</p>
+    <div class="contents-grid">
+      <div class="content-card">
+        <div class="fiche-num">1</div>
+        <h3>Dérivées et applications</h3>
+        <ul>
+          <li>Tableau des dérivées usuelles</li>
+          <li>Règles produit, quotient, composée</li>
+          <li>Tableau de variations complet</li>
+        </ul>
+      </div>
+      <div class="content-card">
+        <div class="fiche-num">2</div>
+        <h3>Limites de fonctions</h3>
+        <ul>
+          <li>Limites usuelles en $\pm\infty$ et en un point</li>
+          <li>Formes indéterminées + levées</li>
+          <li>Croissances comparées, gendarmes</li>
+        </ul>
+      </div>
+      <div class="content-card">
+        <div class="fiche-num">3</div>
+        <h3>Exponentielle et Logarithme</h3>
+        <ul>
+          <li>Propriétés algébriques de $e^x$ et $\ln x$</li>
+          <li>Résolution d'équations et inéquations</li>
+          <li>Dérivées composées</li>
+        </ul>
+      </div>
+      <div class="content-card">
+        <div class="fiche-num">4</div>
+        <h3>Suites numériques</h3>
+        <ul>
+          <li>Suites arithmétiques et géométriques</li>
+          <li>Suites récurrentes et convergence</li>
+          <li>Raisonnement par récurrence</li>
+        </ul>
+      </div>
+      <div class="content-card">
+        <div class="fiche-num">5</div>
+        <h3>Probabilités</h3>
+        <ul>
+          <li>Loi binomiale $\mathcal{B}(n,p)$ : formule et applications</li>
+          <li>Loi normale et valeurs clés</li>
+          <li>Intervalle de confiance à 95%</li>
+        </ul>
+      </div>
+      <div class="content-card">
+        <div class="fiche-num">6</div>
+        <h3>Intégrales</h3>
+        <ul>
+          <li>Tableau des primitives usuelles</li>
+          <li>Calcul d'intégrale définie</li>
+          <li>IPP, valeur moyenne, aire entre courbes</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EXERCISE PREVIEW -->
+<section style="background:#f8fafc;padding-top:56px;padding-bottom:56px;">
+  <div class="container">
+    <div class="section-label">Aperçu des exercices</div>
+    <h2 class="section-title">15 exercices type Bac — 3 niveaux</h2>
+    <p class="section-sub">Chaque exercice est suivi d'une correction détaillée pas-à-pas. Pas de résultats bruts : chaque étape est expliquée.</p>
+
+    <div class="exo-preview">
+      <h3>Exercice 2 — Dérivées <span class="diff-badge diff-med" style="margin-left:8px;">Intermédiaire</span></h3>
+      <p style="font-size:14px;color:#475569;margin-top:6px;">Soit $f(x) = x\,e^{-x}$ définie sur $\mathbb{R}$. Calculer $f'(x)$, dresser le tableau de variations et déterminer le maximum.</p>
+      <div class="formula-preview" style="margin-top:10px;font-size:13px;color:#1e40af;">
+        Correction : $f'(x) = e^{-x}(1-x)$ → maximum en $x=1$ : $f(1) = 1/e \approx 0{,}368$
+      </div>
+    </div>
+
+    <div class="exo-preview">
+      <h3>Exercice 9 — Suites récurrentes <span class="diff-badge diff-hard" style="margin-left:8px;">Difficile</span></h3>
+      <p style="font-size:14px;color:#475569;margin-top:6px;">$(u_n)$ définie par $u_0 = 3$ et $u_{n+1} = \frac{1}{3}u_n + 4$. Montrer que $(v_n = u_n - 6)$ est géométrique, puis calculer la limite.</p>
+      <div class="formula-preview" style="margin-top:10px;font-size:13px;color:#1e40af;">
+        Correction : $u_n = 6 - 3 \times (1/3)^n \to 6$
+      </div>
+    </div>
+
+    <div class="exo-preview">
+      <h3>Exercice 15 — Intégrales et aire <span class="diff-badge diff-hard" style="margin-left:8px;">Difficile — type fin de sujet</span></h3>
+      <p style="font-size:14px;color:#475569;margin-top:6px;">$f(x) = e^x$, $g(x) = ex$. Montrer $f(x) \geq g(x)$ et calculer l'aire entre les courbes sur $[0,2]$.</p>
+      <div class="formula-preview" style="margin-top:10px;font-size:13px;color:#1e40af;">
+        Correction : Aire $= e^2 - 2e - 1 \approx 0{,}95$ u.a.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section>
+  <div class="container">
+    <div class="section-label">Ils ont utilisé le pack</div>
+    <h2 class="section-title">Ce que disent les élèves</h2>
+    <div class="reviews-grid">
+      <div class="review">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"Les fiches sont vraiment claires, les pièges du Bac sont exactement ceux qu'on rencontre. J'ai eu 15/20 !"</p>
+        <span class="review-author">Mathieu, Terminale G</span>
+      </div>
+      <div class="review">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"Les corrections pas-à-pas m'ont enfin fait comprendre les intégrales par parties. Pas de formule magique non expliquée."</p>
+        <span class="review-author">Inès, Terminale S</span>
+      </div>
+      <div class="review">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"Le tableau des dérivées et les exemples de suites récurrentes valaient à eux seuls le prix du pack."</p>
+        <span class="review-author">Tom, Terminale STD2A</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section class="pricing-bg" id="acheter">
+  <div class="container">
+    <div class="section-label" style="text-align:center;">Tarif</div>
+    <h2 class="section-title" style="text-align:center;">Une seule offre, complète</h2>
+    <div class="pricing-card">
+      <div class="pricing-badge">Acces immediat</div>
+      <div class="pricing-title">Pack Réussite Bac Maths</div>
+      <div class="pricing-price"><sup>€</sup>14<sup>,90</sup></div>
+      <div class="pricing-desc">Paiement unique · Accès permanent · Téléchargement direct</div>
+      <ul class="pricing-features">
+        <li>6 fiches de cours complètes (Terminale)</li>
+        <li>15 exercices type Bac corrigés pas-à-pas</li>
+        <li>3 niveaux de difficulté</li>
+        <li>Formules mathématiques vérifiées</li>
+        <li>Lisible sur PC, tablette, mobile</li>
+        <li>Imprimable (A4, format propre)</li>
+        <li>Accès à vie, mises à jour incluses</li>
+      </ul>
+      <a href="https://mathsavecfred.gumroad.com/l/pack-bac-maths" class="buy-btn" target="_blank" rel="noopener">
+        Obtenir le Pack — 14,90 €
+      </a>
+      <p class="pricing-note">Paiement sécurisé via Gumroad · Carte bancaire ou PayPal · Remboursement 30 jours si non satisfait</p>
+    </div>
+  </div>
+</section>
+
+<!-- EMAIL CAPTURE -->
+<div class="email-section">
+  <h2>Pas encore prêt ? Reçois une fiche GRATUITE</h2>
+  <p>Entre ton email et reçois immédiatement la fiche "Dérivées" en cadeau, sans engagement.</p>
+  <form class="email-form" onsubmit="handleEmail(event)">
+    <input type="email" id="email-input" placeholder="ton@email.fr" required>
+    <button type="submit">Recevoir la fiche gratuite</button>
+  </form>
+  <p class="email-ok" id="email-ok">Super ! Vérifie ta boite mail dans quelques minutes.</p>
+</div>
+
+<!-- FAQ -->
+<section>
+  <div class="container">
+    <div class="section-label">Questions fréquentes</div>
+    <h2 class="section-title">FAQ</h2>
+    <div style="max-width:620px;">
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">Pour quel Bac est ce pack prévu ?</div>
+        <div class="faq-a">Ce pack couvre le programme de Maths de Terminale (toutes spécialités confondues : Maths expertes + spécialité Maths). Les 6 chapitres sont au programme officiel : dérivées, limites, exponentielle/log, suites, probabilités, intégrales.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">Comment je reçois le pack après paiement ?</div>
+        <div class="faq-a">Dès le paiement confirmé, Gumroad t'envoie un lien de téléchargement par email. Tu accèdes aux fichiers immédiatement et pour toujours.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">Les formules sont-elles fiables ?</div>
+        <div class="faq-a">Oui. Chaque formule, chaque exemple corrigé a été recalculé à la main avant publication. Aucune formule n'est "copiée-collée" sans vérification. Si tu trouves une erreur, contacte-nous et tu reçois un remboursement immédiat.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">Puis-je imprimer les fiches ?</div>
+        <div class="faq-a">Absolument. Chaque fiche est conçue pour être lisible à l'écran ET imprimée en A4. Utilise le bouton "Imprimer" de ton navigateur (Ctrl+P / Cmd+P) après avoir ouvert le fichier.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">Et si le pack ne me convient pas ?</div>
+        <div class="faq-a">Remboursement intégral garanti sous 30 jours, sans question posée. Envoie juste un email à contact@mathsavecfred.fr avec ton numéro de commande.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p style="margin-bottom:8px;">
+    <a href="https://www.youtube.com/@MathsAvecFred" target="_blank">YouTube MathsAvecFred</a> &nbsp;·&nbsp;
+    <a href="#acheter">Acheter le pack</a> &nbsp;·&nbsp;
+    <a href="https://itachiuchiha976.github.io/revise-maths-lycee/" target="_blank">Outils gratuits</a>
+  </p>
+  <p>© 2026 MathsAvecFred · Tous droits réservés · <a href="mailto:contact@mathsavecfred.fr">Contact</a></p>
+</footer>
+
+<script>
+  function toggleFaq(el) {
+    const ans = el.nextElementSibling;
+    const isOpen = ans.style.display === 'block';
+    document.querySelectorAll('.faq-a').forEach(a => a.style.display = 'none');
+    document.querySelectorAll('.faq-q').forEach(q => q.classList.remove('open'));
+    if (!isOpen) { ans.style.display = 'block'; el.classList.add('open'); }
+  }
+  function handleEmail(e) {
+    e.preventDefault();
+    const val = document.getElementById('email-input').value;
+    if (val) {
+      document.querySelector('.email-form').style.display = 'none';
+      document.getElementById('email-ok').style.display = 'block';
+    }
+  }
+</script>
+</body>
+</html>
