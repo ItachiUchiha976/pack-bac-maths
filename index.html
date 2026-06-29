@@ -329,7 +329,11 @@
   <h2>Pas encore prêt ? Reçois une fiche GRATUITE</h2>
   <p>Entre ton email et reçois immédiatement la fiche "Dérivées" en cadeau, sans engagement.</p>
   <form class="email-form" onsubmit="handleEmail(event)">
-    <input type="email" id="email-input" placeholder="ton@email.fr" required>
+    <input type="hidden" name="access_key" value="d97a8c73-b827-48bb-b437-e053a73fdb7e">
+    <input type="hidden" name="subject" value="Lead pack-bac-maths">
+    <input type="hidden" name="from_name" value="Pack Bac Maths">
+    <input type="checkbox" name="botcheck" style="display:none !important" tabindex="-1" autocomplete="off">
+    <input type="email" id="email-input" name="email" placeholder="ton@email.fr" required>
     <button type="submit">Recevoir la fiche gratuite</button>
   </form>
   <p class="email-ok" id="email-ok">Super ! Vérifie ta boite mail dans quelques minutes.</p>
@@ -385,11 +389,25 @@
   }
   function handleEmail(e) {
     e.preventDefault();
-    const val = document.getElementById('email-input').value;
-    if (val) {
-      document.querySelector('.email-form').style.display = 'none';
-      document.getElementById('email-ok').style.display = 'block';
-    }
+    var ok = document.getElementById('email-ok');
+    fetch('https://api.web3forms.com/submit', {
+      method: 'POST',
+      body: new FormData(e.target)
+    })
+    .then(function(r){ return r.json(); })
+    .then(function(d){
+      if (d.success) {
+        document.querySelector('.email-form').style.display = 'none';
+        ok.style.display = 'block';
+      } else {
+        ok.textContent = 'Une erreur est survenue. Réessaie dans un instant.';
+        ok.style.display = 'block';
+      }
+    })
+    .catch(function(){
+      ok.textContent = 'Une erreur est survenue. Réessaie dans un instant.';
+      ok.style.display = 'block';
+    });
   }
 </script>
 </body>
